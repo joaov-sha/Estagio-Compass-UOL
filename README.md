@@ -1,6 +1,6 @@
 # Programa de Bolsas de Estágio de Desenvolvimento Frontend Compass UOL
 
-Aqui estarão disponibilizados os cursos e certificações realizados, e também, os projetos de solução para quaisquer atividades propostas durante o estágio.
+Aqui estarão disponibilizados os nomes dos cursos e certificações realizados, e também, os projetos de solução para quaisquer atividades propostas durante o estágio.
 
 ### Cursos e certificações realizados
  Curso | Duração | Seções | Estado | Certificado 
