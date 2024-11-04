@@ -17,6 +17,6 @@ Understanding TypeScript | 5h 1m | 9/16 | Em Andamento :hourglass: | [Certificad
 ### Atividades e desafios
  Atividade | Prazo | Estado | Link
 -----------|-------|--------|------ 
-Construção de Página Web | 11/11/2024 | Em andamento :hourglass: | [Link do Projeto](# "Link a ser adicionado")
+Construção de Página Web | 11/11/2024 | Em andamento :hourglass: | [Link do Projeto](https://github.com/joaov-sha/Estagio-Compass-UOL/tree/main/desafios/desafio02 "Link para os arquivos do projeto")
 
  ```Programa de bolsas realizado junto à Compass UOL```
