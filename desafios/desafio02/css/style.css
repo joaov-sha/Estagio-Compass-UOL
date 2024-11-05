@@ -4,4 +4,29 @@
     margin: auto;
     padding: 0px;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.container{
+    width: 1200px;
+}
+
+header a:link, header a:active, header a:visited{
+    color: ;
+}
+
+header section:nth-child div{
+    flex-direction: column;
+}
+
+header input[type="email"]{
+    width: 180px;
+}
+
+header section:nth-child(1) img{
+    width: 36px;
+}
+
+header section:nth-child(2){
+    background-color: aliceblue;
 }
