@@ -7,6 +7,10 @@
     font-family: "Montserrat", sans-serif;
 }
 
+.container{
+    width: 1200px;
+}
+
 header section:nth-child(1){
     background-color: #252b42;
     display: flex;
