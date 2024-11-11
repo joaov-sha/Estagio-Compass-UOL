@@ -1,17 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     createItemDescription();
-    atualizarImagem();
 });
-
-function atualizarImagem(){
-    const imagem = document.getElementById("banner-medio");
-
-    if(window.innerWidth <= 600){
-        imagem.src = 'desafios/desafio02/img/responsive/sub-section/none.png'
-    }else{
-        imagem.src = 'desafios/desafios02/img/normal/sub-section/col-md-6png'
-    }
-}
 
 function createItemDescription(){
     fetch('./js/itens.json')
