@@ -28,7 +28,7 @@
     width: 24px;
 }
 
-#slideshow-1-back, #slideshow-1-forward{
+.slideshow-back, .slideshow-forward{
     position: absolute;
     top: 0;
     width: 12.5%;
@@ -45,36 +45,36 @@
     color: white;
 }
 
-#slideshow-1-back{
+.slideshow-back{
     left: 0;
 }
 
-#slideshow-1-forward{
+.slideshow-forward{
     right: 0;
 }
 
-#slideshow-1-back:hover, #slideshow-1-forward:hover{
+.slideshow-back:hover, .slideshow-forward:hover{
     background-color: rgba(255,255,255,0.55);
 }
 
-#slideshow-1, #slideshow-1 img{
+.slideshow, .slideshow img{
     width: 100%;
     position: relative;
 }
 
-#slideshow-1-info{
+.slideshow-info{
     position: absolute;
     top: 30%;
     left: 15%;
     color: white;
 }
 
-#slideshow-1-info p:nth-child(1){
+.slideshow-info p:nth-child(1){
     font-weight: bold;
     margin-bottom: 30px;
 }
 
-#slideshow-1-info p:nth-child(3){
+.slideshow-info p:nth-child(3){
     font-weight: 400;
     font-size: 18px;
     margin-left: 0px;
@@ -83,12 +83,12 @@
     word-wrap: break-word;
 }
 
-#slideshow-1-info h1{
+.slideshow-info h1{
     margin-bottom: 40px;
     font-size: 48px;
 }
 
-#slideshow-1-info button{
+.slideshow-info button{
     border: none;
     color: white;
     background-color: #2DC071;
@@ -99,7 +99,7 @@
     font-size: 24px;
 }
 
-#slideshow-1-info button:hover{
+.slideshow-info button:hover{
     cursor: pointer;
 }
 
@@ -681,11 +681,13 @@ footer section:nth-child(2) div .contact-form div > button{
 
     main section:nth-child(2) > div:nth-child(1){
         width: 100vw;
+        flex-wrap: wrap;
+        text-align: center;
     }
 
-    main section:nth-child(2) > div:nth-child(1) img{
+    main section:nth-child(2) > div:nth-child(1) > div:nth-child(1) img{
         flex-wrap: wrap;
-        border: 1px solid red;
+        width: 5vw;
     }
 
     main section:nth-child(2) img{
@@ -723,21 +725,43 @@ footer section:nth-child(2) div .contact-form div > button{
         width: 100vw;
     }
 
-    main section:nth-child(5) img{
+    main section:nth-child(5) div > img{
+        width: 100vw;
+        padding-left: 10%;
+        text-align: center;
+    }
+
+    main section:nth-child(5) div:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
         max-width: 100vw;
     }
 
-    .cards{
-        position: relative;
+    main section:nth-child(5) div:nth-child(2) h3{
+        width: 60vw;
+        text-align: center;
     }
 
-    .cards a img{
-        padding-left: 10%;
+    main section:nth-child(5) div:nth-child(2) p{
+        font-weight: 500;
+        text-align: center;
+        width: 50vw;
     }
 
-    .cards .new-tag{
-        top: 5%;
-        left: 10%;
+    main section:nth-child(5) div:nth-child(2) div{
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    main section:nth-child(5) div:nth-child(2) div button:nth-child(1){
+        background-color: #23a6f0;
+    }
+
+    main section:nth-child(5) div:nth-child(2) div button:nth-child(2){
+        color: #23a6f0;
+        border-color: #23a6f0;
     }
     
     main section:nth-child(6) > div{
@@ -749,6 +773,21 @@ footer section:nth-child(2) div .contact-form div > button{
     main section:nth-child(6) > div > div{
         display: flex;
         flex-direction: column;
+    }
+
+    .cards{
+        position: relative;
+    }
+
+    .cards a img{
+        display: flex;
+        position: relative;
+    }
+
+    .cards .new-tag{
+        z-index: 1;
+        top: 5%;
+        left: 10%;
     }
 
     footer section:nth-child(1){
@@ -772,6 +811,10 @@ footer section:nth-child(2) div .contact-form div > button{
         flex-direction: row;
         width: 100vw;
         text-align: center;
+    }
+
+    footer section:nth-child(2) > div > div:nth-child(2){
+        display: flex;
     }
 
     footer section:nth-child(2) > div{
@@ -810,5 +853,8 @@ footer section:nth-child(2) div .contact-form div > button{
         display: flex;
         text-align: center;
     }
-}
 
+    footer section:nth-child(3) p{
+        padding: 0px 100px;
+    }
+}
