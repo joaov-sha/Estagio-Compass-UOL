@@ -221,9 +221,14 @@ main section:nth-child(2) h3, main section:nth-child(2) p{
     margin-top: 10px;
 }
 
-main section:nth-child(2) .container .container{
+main section:nth-child(2) .container .container {
     display: flex;
-    padding-top: 100px;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
 }
 
 main section:nth-child(2) .container .container > div:nth-child(1){
@@ -238,7 +243,7 @@ main section:nth-child(2) .container .container > div:nth-child(2){
     width: 20%;
 }
 
-main section:nth-child(2) .container .container > div:nth-child(2) img{
+main section:nth-child(2) .container img{
     margin-top: 10px;
     width: 120%;
 }
@@ -387,7 +392,7 @@ main section:nth-child(5) div button:nth-child(2){
 }
 
 main section:nth-child(6) .container{
-    padding: 100px 0px;
+    padding: 30px 0px;
 }
 
 main section:nth-child(6) .container .titulo a{
@@ -484,6 +489,7 @@ main section:nth-child(6) .container .titulo p{
     gap: 8px;
     align-items: center;
 }
+
 .card-info a:nth-child(5){
     display: flex;
     align-items: center;
@@ -650,9 +656,40 @@ footer section:nth-child(2) div .contact-form div > button{
         content: 'shopping_cart';
     }
 
+    main section:nth-child(2){
+        padding: 10px;
+    }
+
+    main section:nth-child(2) .container{
+        flex-direction: column;
+    }
+
+    main section:nth-child(2) .container .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main section:nth-child(2) .container .container > div {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    main section:nth-child(2) .container img {
+        width: 100%;
+        height: auto;
+    }
+
     main section:nth-child(2) > div:nth-child(1){
         width: 100vw;
-        display: flex;
+    }
+
+    main section:nth-child(2) > div:nth-child(1) img{
+        flex-wrap: wrap;
+        border: 1px solid red;
+    }
+
+    main section:nth-child(2) img{
+        width: 100vh;
     }
 
     main section:nth-child(2) > div > div{
@@ -673,17 +710,36 @@ footer section:nth-child(2) div .contact-form div > button{
         width: 100vw;
     }
 
+    main section:nth-child(5){
+        margin: 100% 0% 20% 0%;
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     main section:nth-child(5) > div{
-        margin-top: 100%;
         display: flex;
         flex-direction: column;
         width: 100vw;
     }
 
     main section:nth-child(5) img{
-        content: url('./desafios/desafio02/img/responsive/sub-section/none.png');
+        max-width: 100vw;
     }
 
+    .cards{
+        position: relative;
+    }
+
+    .cards a img{
+        padding-left: 10%;
+    }
+
+    .cards .new-tag{
+        top: 5%;
+        left: 10%;
+    }
+    
     main section:nth-child(6) > div{
         display: flex;
         flex-direction: column;
@@ -702,7 +758,7 @@ footer section:nth-child(2) div .contact-form div > button{
     footer section:nth-child(1) > div{
         display: flex;
         width: 100vw;
-        padding: 60px 0px;
+        padding: 30px 0px 60px 0px;
         flex-direction: column;
     }
     
@@ -728,7 +784,7 @@ footer section:nth-child(2) div .contact-form div > button{
         display: flex;
         flex-direction: column;
         width: 100vw;
-        padding-left: 60px;
+        padding-left: 40px;
     }
 
     footer .contact-form{
@@ -736,13 +792,23 @@ footer section:nth-child(2) div .contact-form div > button{
         flex-direction: column;
     }
 
+    footer section:nth-child(2) div .contact-form div > button{
+        flex: 0;
+        margin-left: -35px;
+    }
+
     footer .contact-form div{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+    }
+
+    footer section:nth-child(2) div > div:nth-child(5){
+        width: 100vw;
     }
 
     footer section:nth-child(3){
         display: flex;
+        text-align: center;
     }
 }
 
