@@ -13,8 +13,8 @@ Certificação AI-Assisted Certified Professional | N/A | N/A | Concluído :chec
 Certificação Gen AI Technical Certification | N/A | N/A | Concluído :checkered_flag: | [Certificado de Conclusão](https://www.linkedin.com/feed/update/urn:li:activity:7259290463608709120/ "Link para o certificado de conclusão")
 Understanding HTML and CSS (2024 Edition) | 17h 50m | 30/30 | Concluído :checkered_flag: | [Certificado de Conclusão](https://compassuol.udemy.com/certificate/UC-2cb2fd79-fab4-4227-a833-d87c00428307/ "Link para o certificado de conclusão")
 JavaScript Basics for Beginners | 6h 38m | 7/7 | Concluído :checkered_flag: | [Certificado de Conclusão](https://compassuol.udemy.com/certificate/UC-8ef26bde-76f0-4fc4-bb1b-c75e753a798c/ "Link para o certificado de conclusão")
-Understanding TypeScript | 15h | 16/16 | Em Andamento :hourglass: | [Certificado de Conclusão](https://compassuol.udemy.com/certificate/UC-55612b69-863c-499c-81ef-7cca884b9a1c/ "Link para o certificado de conclusão")
-The Complete 2024 Web Development Bootcamp | 61h 30m| Concluído :checkere_flag: | [Certificado de Conclusão](https://compassuol.udemy.com/certificate/UC-28752f7f-80ca-44d9-8cd5-b404294b7f8d/ "Link para o certificado de conclusão")
+Understanding TypeScript | 15h | 16/16 | Concluído :checkered_flag: | [Certificado de Conclusão](https://compassuol.udemy.com/certificate/UC-55612b69-863c-499c-81ef-7cca884b9a1c/ "Link para o certificado de conclusão")
+The Complete 2024 Web Development Bootcamp | 61h 30m| 44/44 | Concluído :checkered_flag: | [Certificado de Conclusão](https://compassuol.udemy.com/certificate/UC-28752f7f-80ca-44d9-8cd5-b404294b7f8d/ "Link para o certificado de conclusão")
 
 ### Atividades e desafios
  Atividade | Prazo | Estado | Link
