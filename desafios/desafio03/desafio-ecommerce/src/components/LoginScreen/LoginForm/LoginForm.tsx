@@ -4,6 +4,7 @@ import { FormEvent, useState } from "react";
 import { app } from "../../../firebase/firebaseSetup";
 import CallToAction from "../CallToAction/CallToAction";
 import css from './Form.module.css';
+import GoogleSignInButton from '../GoogleSignInButton/GoogleSignInButton';
 
 function LoginForm() {
   const [email, setEmail] = useState<string>("");
@@ -55,9 +56,10 @@ function LoginForm() {
         <a href="#" className={css.forgotPassword}>Forgot Password?</a>
       </fieldset>
       <fieldset>
-      <button type="submit" className={css.submitButton}>
-          {isRegistering ? "Sign Up" : "Sign In"}
+        <button type="submit" className={css.submitButton}>
+            {isRegistering ? "Sign Up" : "Sign In"}
         </button>
+        <GoogleSignInButton/>
       </fieldset>
       <CallToAction 
         label={isRegistering ? "Sign Up" : "Sign In"} 

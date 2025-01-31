@@ -1,27 +1,29 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { app } from "../../../firebase/firebaseSetup";
+import css from "./GoogleButton.module.css";
+import googleLogo from "../../../assets/googleLogo.svg";
 
-function GoogleSignInButton(){
+const GoogleSignInButton = () => {
+  const auth = getAuth(app);
+  const provider = new GoogleAuthProvider();
 
-    const auth = getAuth(app);
-    const provider = new GoogleAuthProvider;
+  const handleGoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, provider);
+      console.log("Usuário logado com Google: ", result.user);
+    } catch (error) {
+      console.error("Erro no login com Google: ", error);
+    }
+  };
 
-    const handleGoogleSignIn = async () => {
-        try{
-            const result = await signInWithPopup(auth, provider);
-            const user = result.user;
-            console.log("Usuário logado: " , user);
-        }catch(error){
-            console.error("Erro no login com Google: ", error);
-        }
-    };
-
-    return (
-        <button onClick={handleGoogleSignIn} className="flex items-center px-4 py-2 bg-white border rounded-lg shadow hover:shadow-md">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Google Logo" className="w-5 h-5 mr-2" />
-            Sign in with Google
-        </button>
-    );
-}
+  return (
+    <button onClick={handleGoogleLogin} className={css.googleButton}>
+      <img src={googleLogo} alt="Google Logo" className={css.googleLogo} />
+      <p>
+        Sign in with Google
+      </p>
+    </button>
+  );
+};
 
 export default GoogleSignInButton;
