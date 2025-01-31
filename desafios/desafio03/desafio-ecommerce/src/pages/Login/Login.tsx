@@ -9,7 +9,9 @@ function Login(){
         <div className={css.body}>
             <AppTitle></AppTitle>
             <LoginForm></LoginForm>
-            <CallToAction></CallToAction>
+            <CallToAction label={""} onClick={function (): void {
+                throw new Error("Function not implemented.");
+            } } isRegistering={false}></CallToAction>
         </div>
     )
 }

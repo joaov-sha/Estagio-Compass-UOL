@@ -1,14 +1,24 @@
-import css from './Call.module.css';
+import React from "react";
+import css from "./Call.module.css"; // Certifique-se de criar este arquivo para estilos
+import { Link } from "react-router-dom";
 
-function CallToAction(){
-    return(
-        <p className={css.call}>
-            Testando
-            <a href=''>
-                1...2
-            </a>
-        </p>
-    )
+interface CallToActionProps {
+  label: string;
+  onClick: () => void;
+  isRegistering: boolean;
 }
 
-export default CallToAction
+const CallToAction: React.FC<CallToActionProps> = ({ label, onClick, isRegistering }) => {
+  return (
+    <div className={css.callToActionContainer}>
+      <p className={css.switchMode}>
+        {isRegistering ? "Already have an account?" : "Don't have an account?"}{" "}
+        <Link to="" onClick={(e) => { e.preventDefault(); onClick(); }} className={css.switchLink}>
+          {isRegistering ? "Sign In" : "Sign Up"}
+        </Link>
+      </p>
+    </div>
+  );
+};
+
+export default CallToAction;

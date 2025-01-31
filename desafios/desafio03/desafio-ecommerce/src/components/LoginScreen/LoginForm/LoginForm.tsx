@@ -1,54 +1,71 @@
-import React, { useState } from "react";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { app } from "../../../firebase/firebaseSetup";
-import GoogleSignInButton from '../GoogleSignInButton/GoogleSignInButton';
-import css from './Form.module.css';
 import FeatherIcon from 'feather-icons-react';
+import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { FormEvent, useState } from "react";
+import { app } from "../../../firebase/firebaseSetup";
+import CallToAction from "../CallToAction/CallToAction";
+import css from './Form.module.css';
 
-function LoginForm(){
+function LoginForm() {
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [isRegistering, setIsRegistering] = useState<boolean>(false);
 
-    const autenticacao = () => {
-        const[email, setEmail] = useState("");
-        const[password, setPassword] = useState("");
-        const[isRegistering, setIsRegistering] = useState("false");
+  const auth = getAuth(app);
 
-        const auth = getAuth(app);
-
-        const handleSubmit = async (e) => {
-            e.preventDefault();
-            try{
-                if(isRegistering){
-                    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-                    console.log("Usuário cadastrado com sucesso: ", userCredential.user);
-                }else{
-                    const userCredential = await signInWithEmailAndPassword(auth, email, password);
-                    console.log("Usuário logou com sucesso: ", userCredential.user);
-                }
-            }catch (error){
-                console.error("Erro na autenticação: ", error);
-            }
-        }
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    try {
+      if (isRegistering) {
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        console.log("Usuário cadastrado: ", userCredential.user);
+      } else {
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        console.log("Usuário logou com sucesso: ", userCredential.user);
+      }
+    } catch (error) {
+      console.error("Erro na autenticação: ", error);
     }
+  };
 
-    return(
-        <form onSubmit={handleSubmit}>
-            <fieldset className={css.fieldset}>
-                <div>
-                    <FeatherIcon icon="mail" className={css.icon}/>
-                    <input type="email" name="" id="" placeholder="Email"/>
-                </div>
-                <div>
-                    <FeatherIcon icon="lock" className={css.icon}/>
-                    <input type="password" name="" id="" placeholder="Password"/>
-                </div>
-                <a href="">Forgot Password</a>
-            </fieldset>
-            <fieldset>
-                <button type="submit">Sign In</button>
-                <GoogleSignInButton></GoogleSignInButton>
-            </fieldset>
-        </form>
-    )
+  return (
+    <form onSubmit={handleSubmit} className={css.form}>
+      <fieldset className={css.fieldset}>
+        <div className={css.inputGroup}>
+          <FeatherIcon icon="mail" className={css.icon} />
+          <input 
+            type="email" 
+            placeholder="Email" 
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} 
+            className={css.input} 
+            required 
+          />
+        </div>
+        <div className={css.inputGroup}>
+          <FeatherIcon icon="lock" className={css.icon} />
+          <input 
+            type="password" 
+            placeholder="Password" 
+            value={password} 
+            onChange={(e) => setPassword(e.target.value)} 
+            className={css.input} 
+            required 
+          />
+        </div>
+        <a href="#" className={css.forgotPassword}>Forgot Password?</a>
+      </fieldset>
+      <fieldset>
+      <button type="submit" className={css.submitButton}>
+          {isRegistering ? "Sign Up" : "Sign In"}
+        </button>
+      </fieldset>
+      <CallToAction 
+        label={isRegistering ? "Sign Up" : "Sign In"} 
+        onClick={() => setIsRegistering((prev) => !prev)} 
+        isRegistering={isRegistering}
+      />
+    </form>
+  );
 }
 
-export default LoginForm
+export default LoginForm;

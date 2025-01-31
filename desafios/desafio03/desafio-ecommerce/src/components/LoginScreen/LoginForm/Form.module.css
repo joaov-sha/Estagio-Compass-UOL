@@ -14,25 +14,45 @@ fieldset:nth-of-type(1){
 
 fieldset input{
     border: none;
-    height: 40px;
     width: 90%;
     border-radius: 10px;
 }
 
 input{
+    flex: 1;
     align-items: center;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    height: 100%;
+    background: white;
+}
+
+.inputGroup{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    height: 50px;
+    background-color: white;
+    width: 90%;
 }
 
 fieldset div{
     display: flex;
-    flex-direction: row;
-    background-color: white;
-    border: none;
-    border-radius: 10px;
-    width: 90%;
-    padding: 0px 5px;
-    margin-bottom: 10px;
     align-items: center;
+    gap: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    height: 50px;
+    width: 100%;
+}
+
+fieldset div:nth-of-type(1){
+    margin-bottom: 10px;
 }
 
 input[type="email"]{
@@ -59,4 +79,8 @@ form a:link, form a:active, form a:visited{
     color: white;
     text-decoration: none;
     font-weight: bold;
+}
+
+fieldset:nth-of-type(2){
+    margin-top: 50px;
 }
