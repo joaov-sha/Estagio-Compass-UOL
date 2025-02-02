@@ -2,11 +2,9 @@ import FeatherIcon from 'feather-icons-react';
 import css from './Research.module.css';
 import { useNavigate } from "react-router-dom";
 
-
 function SearchForm(){
 
     const navigate = useNavigate();
-
 
     return(
         <div className={css.search}>

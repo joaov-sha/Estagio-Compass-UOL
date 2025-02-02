@@ -17,7 +17,7 @@ const CallToAction: React.FC<CallToActionProps> = ({ isRegistering, setIsRegiste
           to="#" 
           onClick={(e) => {
             e.preventDefault();
-            setIsRegistering((prev) => !prev); // Agora alterna corretamente
+            setIsRegistering((prev) => !prev);
           }} 
         >
           {isRegistering ? "Sign In here" : "Sign Up here"}
