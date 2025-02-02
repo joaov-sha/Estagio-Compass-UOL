@@ -1,0 +1,105 @@
+.navbar {
+  position: relative;
+}
+
+/* Botão do Menu */
+.menuButton {
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: transform 0.2s ease;
+  color: black;
+  background-color: transparent;
+}
+
+.menuButton:hover {
+  transform: scale(1.1);
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 17.5%;
+  background: transparent;
+  color: black;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.closeButton:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/* Barra Lateral */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px; /* Fora da tela inicialmente */
+  width: 300px;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+.sidebar.show {
+  left: 0; /* Mover a barra para dentro da tela */
+}
+
+/* Links do Menu */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #0288d1; /* Azul mais escuro no hover */
+}
+
+/* Fundo ao abrir o menu */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  display: none;
+}
+
+.backdrop.show {
+  display: block;
+}

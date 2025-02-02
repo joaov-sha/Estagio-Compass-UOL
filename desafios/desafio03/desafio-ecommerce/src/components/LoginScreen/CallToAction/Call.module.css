@@ -15,7 +15,7 @@ a:link, a:active, a:visited{
     color: white;
 }
 
-p{
+.callToActionContainer p{
     color: white;
     font-weight: bold;
 }

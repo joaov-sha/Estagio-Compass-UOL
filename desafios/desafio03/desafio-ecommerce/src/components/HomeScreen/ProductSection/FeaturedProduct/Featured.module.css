@@ -1,0 +1,31 @@
+.featuredContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .details {
+    max-width: 60%;
+  }
+  
+  .image {
+    max-width: 150px;
+    height: auto;
+  }
+  
+  .shopNow {
+    background-color: #1de9b6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+  

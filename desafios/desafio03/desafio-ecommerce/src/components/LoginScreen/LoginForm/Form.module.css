@@ -64,7 +64,7 @@ input[type="password"]{
     margin-bottom: 10px;
 }
 
-button{
+.form button{
     height: 50px;
     width: 90%;
     margin-bottom: 10px;

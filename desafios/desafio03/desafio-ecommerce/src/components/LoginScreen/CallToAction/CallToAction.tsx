@@ -1,20 +1,26 @@
 import React from "react";
-import css from "./Call.module.css"; // Certifique-se de criar este arquivo para estilos
+import css from "./Call.module.css"; 
 import { Link } from "react-router-dom";
 
 interface CallToActionProps {
-  label: string;
-  onClick: () => void;
   isRegistering: boolean;
+  setIsRegistering: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const CallToAction: React.FC<CallToActionProps> = ({ label, onClick, isRegistering }) => {
+const CallToAction: React.FC<CallToActionProps> = ({ isRegistering, setIsRegistering }) => {
   return (
     <div className={css.callToActionContainer}>
       <p className={css.switchMode}>
         {isRegistering ? "Already have an account?" : "Don't have an account?"}{" "}
-        <Link to="" onClick={(e) => { e.preventDefault(); onClick(); }} className={css.switchLink}>
-          {isRegistering ? "Sign In" : "Sign Up"}
+        <Link 
+          className={css.link}
+          to="#" 
+          onClick={(e) => {
+            e.preventDefault();
+            setIsRegistering((prev) => !prev); // Agora alterna corretamente
+          }} 
+        >
+          {isRegistering ? "Sign In here" : "Sign Up here"}
         </Link>
       </p>
     </div>
