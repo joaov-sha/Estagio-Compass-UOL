@@ -25,6 +25,7 @@ const HighlightProducts: React.FC<HighlightProductsProps> = ({ products }) => {
   return (
     <div className={css.carouselContainer}>
       <h4>Featured Products</h4>
+      <button className={css.seeAllButton}>See All</button>
       <Swiper slidesPerView={2.2} spaceBetween={10} className={css.swiper}>
         {products.map((product) => (
           <SwiperSlide key={product.id} className={css.slide}>
