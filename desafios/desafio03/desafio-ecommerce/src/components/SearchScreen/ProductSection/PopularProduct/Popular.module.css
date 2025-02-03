@@ -1,0 +1,99 @@
+.popularProducts {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 70%;
+  }
+  
+  h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  
+  .productList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .productItem {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .productItem:last-child {
+    border-bottom: none;
+  }
+  
+  .productImage {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 12px;
+  }
+  
+  .productDetails {
+    flex: 1;
+  }
+  
+  .productDetails h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .productDetails p {
+    font-size: 0.9rem;
+    margin: 4px 0;
+    font-weight: bold;
+  }
+  
+  .rating {
+    color: #f59e0b;
+    position: relative;
+  }
+
+  .evaluation{
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .starIcon {
+    margin-right: 4px;
+  }
+  
+  .reviewCount {
+    color: #888;
+    margin-left: 8px;
+  }
+  
+  .moreButton {
+    background: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+  }
+  
+  .searchResults{
+    margin: -80% 0% 15% 0%;
+  }
+
+  .reviews{
+    position: relative;
+    right: -5%;
+    font-size: 14px;
+    width: 100%;
+  }
