@@ -1,4 +1,5 @@
-.googleButton {
+@media screen and (max-width: 600px){
+  .googleButton {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,7 +23,8 @@
     height: 20px;
   }
   
-  .googleButton p{
+  .googleButton p {
     width: 100%;
     padding: 0px;
   }
+}

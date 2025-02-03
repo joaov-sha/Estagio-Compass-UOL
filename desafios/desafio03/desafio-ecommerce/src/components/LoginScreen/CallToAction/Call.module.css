@@ -1,21 +1,23 @@
-.callToActionContainer{
-    display: block;
-    position: fixed;
-    width: 100%;
-    bottom: 3%;
-    text-align: center;
-    font-weight: bold;
-}
-
-a:link, a:active, a:visited{
-    color: #0ACF83;
-}
-
-.call label{
-    color: white;
-}
-
-.callToActionContainer p{
-    color: white;
-    font-weight: bold;
+@media screen and (max-width: 600px) {
+    .callToActionContainer{
+        display: block;
+        position: fixed;
+        width: 100%;
+        bottom: 3%;
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    a:link, a:active, a:visited{
+        color: #0ACF83;
+    }
+    
+    .call label{
+        color: white;
+    }
+    
+    .callToActionContainer p{
+        color: white;
+        font-weight: bold;
+    }
 }

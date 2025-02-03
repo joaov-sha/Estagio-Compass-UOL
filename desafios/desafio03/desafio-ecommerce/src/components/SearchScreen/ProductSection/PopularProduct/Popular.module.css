@@ -1,4 +1,5 @@
-.popularProducts {
+@media screen and (max-width: 600px){
+  .popularProducts {
     display: flex;
     flex-direction: column;
     background: #fff;
@@ -8,13 +9,13 @@
     max-width: 400px;
     margin: auto;
     margin-top: 70%;
-
+  
     h4 {
       font-size: 1.2rem;
       font-weight: 600;
       margin-bottom: 12px;
     }
-    
+  
     .productList {
       display: flex;
       flex-direction: column;
@@ -23,7 +24,7 @@
       padding: 0;
       margin: 0;
     }
-    
+  
     .productItem {
       display: flex;
       width: 100%;
@@ -31,11 +32,11 @@
       padding: 10px 0;
       border-bottom: 1px solid #eaeaea;
     }
-    
+  
     .productItem:last-child {
       border-bottom: none;
     }
-    
+  
     .productImage {
       width: 50px;
       height: 50px;
@@ -43,43 +44,43 @@
       object-fit: cover;
       margin-right: 12px;
     }
-    
+  
     .productDetails {
       flex: 1;
     }
-    
+  
     .productDetails h5 {
       font-size: 1rem;
       font-weight: 600;
       margin: 0;
     }
-    
+  
     .productDetails p {
       font-size: 0.9rem;
       margin: 4px 0;
       font-weight: bold;
     }
-    
+  
     .rating {
       color: #f59e0b;
       position: relative;
     }
   
-    .evaluation{
+    .evaluation {
       display: flex;
       align-items: center;
       width: 100%;
     }
-    
+  
     .starIcon {
       margin-right: 4px;
     }
-    
+  
     .reviewCount {
       color: #888;
       margin-left: 8px;
     }
-    
+  
     .moreButton {
       border: none;
       background: none;
@@ -88,17 +89,16 @@
       position: relative;
       top: 0;
     }
-    
-    .searchResults{
+  
+    .searchResults {
       margin: -80% 0% 15% 0%;
     }
   
-    .reviews{
+    .reviews {
       position: relative;
       right: -5%;
       font-size: 14px;
       width: 100%;
     }
   }
-  
-  
+}

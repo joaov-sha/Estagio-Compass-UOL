@@ -1,5 +1,7 @@
-.show{
-    background-color: #F6F6F6;
-    height: 65vh;
-    border-radius: 10%;
+@media screen and (max-width:600px) {
+    .show{
+        background-color: #F6F6F6;
+        height: 65vh;
+        border-radius: 10%;
+    }
 }

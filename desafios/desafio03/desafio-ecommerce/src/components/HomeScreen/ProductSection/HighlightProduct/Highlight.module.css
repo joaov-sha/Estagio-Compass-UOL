@@ -1,13 +1,14 @@
-.carouselContainer {
+@media screen and (max-width: 600px) {
+  .carouselContainer {
     margin-top: 20px;
     width: 90%;
-
-    h4{
+  
+    h4 {
       width: 50%;
       display: inline-block;
     }
-
-    .seeAllButton{
+  
+    .seeAllButton {
       width: 50%;
       text-align: right;
       border: none;
@@ -15,8 +16,8 @@
       font-weight: bold;
       color: #a6a6a6;
     }
-
-    .seeAllButton:hover{
+  
+    .seeAllButton:hover {
       cursor: pointer;
     }
   }
@@ -46,17 +47,16 @@
     margin-bottom: 10px;
   }
   
-  .productName{
+  .productName {
     font-weight: normal;
     display: flex;
     width: 100%;
   }
-
-  .price{
+  
+  .price {
     font-weight: bold;
     text-align: left;
     position: fixed;
     bottom: 15px;
   }
-
-  
+}
