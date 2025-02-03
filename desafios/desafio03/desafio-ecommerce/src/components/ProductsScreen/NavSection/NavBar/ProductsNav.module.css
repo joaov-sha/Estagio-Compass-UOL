@@ -1,0 +1,27 @@
+@media screen and (max-width: 600px) {
+    .productsNav{
+
+        ul{
+            list-style: none;
+            display: flex;
+            width: 90%;
+        }
+    
+        li{
+            width: 50%;
+        }
+    
+        li:nth-of-type(2){
+            text-align: right;
+        }
+    
+        button{
+            border: none;
+            background-color: transparent;
+        }
+    
+        button:hover{
+            cursor: pointer;
+        }
+    }
+}
