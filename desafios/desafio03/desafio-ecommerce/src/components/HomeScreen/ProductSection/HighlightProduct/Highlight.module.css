@@ -1,6 +1,24 @@
 .carouselContainer {
     margin-top: 20px;
     width: 90%;
+
+    h4{
+      width: 50%;
+      display: inline-block;
+    }
+
+    .seeAllButton{
+      width: 50%;
+      text-align: right;
+      border: none;
+      background-color: transparent;
+      font-weight: bold;
+      color: #a6a6a6;
+    }
+
+    .seeAllButton:hover{
+      cursor: pointer;
+    }
   }
   
   .swiper {
@@ -40,3 +58,5 @@
     position: fixed;
     bottom: 15px;
   }
+
+  

@@ -1,9 +1,7 @@
 .searchNav{
-    nav{
-        display: flex;
-        flex-direction: column;
-    }
-    
+    display: flex;
+    flex-direction: column;
+        
     ul{
         display: flex;
         list-style: none;
@@ -23,7 +21,7 @@
         cursor: pointer;
     }
     
-    nav > div{
+    div{
         display: flex;
         border: 1px solid #acacac;
         border-radius: 5px;

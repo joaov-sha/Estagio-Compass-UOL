@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import css from "./Highlight.module.css";
+import { useNavigate } from "react-router-dom";
 
 interface Product {
   id: string;
@@ -22,10 +23,16 @@ const HighlightProducts: React.FC<HighlightProductsProps> = ({ products }) => {
     return <p className={css.noProducts}>Nenhum produto encontrado para esta categoria.</p>;
   }
 
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate("/products");
+  }
+
   return (
     <div className={css.carouselContainer}>
       <h4>Featured Products</h4>
-      <button className={css.seeAllButton}>See All</button>
+      <button className={css.seeAllButton} onClick={handleNavigate}>See All</button>
       <Swiper slidesPerView={2.2} spaceBetween={10} className={css.swiper}>
         {products.map((product) => (
           <SwiperSlide key={product.id} className={css.slide}>
